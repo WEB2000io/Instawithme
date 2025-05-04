@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InstaWithMe - Viral Reel Ideas</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      color: #ff4d4f;
+    }
+    .section {
+      margin: 30px 0;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    button.copy {
+      background-color: #ff4d4f;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      float: right;
+    }
+    button.copy:hover {
+      background-color: #e63946;
+    }
+  </style>
+</head>
+<body>
+  <h1>InstaWithMe - Viral Captions & Trending Songs</h1>  <div class="section">
+    <h2>Today's Viral Captions</h2>
+    <div class="card">"Wait till the end… it's worth it!" <button class="copy">Copy</button></div>
+    <div class="card">"Kya aapko bhi aise hi feel hota hai?" <button class="copy">Copy</button></div>
+    <div class="card">"This reel deserves 1 million views!" <button class="copy">Copy</button></div>
+    <div class="card">"Sach batao, kitni baar dekha?" <button class="copy">Copy</button></div>
+    <div class="card">"Can you feel the vibe?" <button class="copy">Copy</button></div>
+  </div>  <div class="section">
+    <h2>Trending Reel Songs</h2>
+    <div class="card">Heeriye - Arijit Singh <button class="copy">Copy</button></div>
+    <div class="card">Pasoori - Ali Sethi & Shae Gill <button class="copy">Copy</button></div>
+    <div class="card">Maan Meri Jaan - King <button class="copy">Copy</button></div>
+    <div class="card">Until I Found You - Stephen Sanchez <button class="copy">Copy</button></div>
+    <div class="card">Tumse Milke Dil Ka - Lo-fi Mix <button class="copy">Copy</button></div>
+  </div>  <script>
+    document.querySelectorAll('.copy').forEach(button => {
+      button.addEventListener('click', () => {
+        const text = button.parentElement.textContent.replace('Copy', '').trim();
+        navigator.clipboard.writeText(text);
+        button.innerText = 'Copied!';
+        setTimeout(() => (button.innerText = 'Copy'), 1000);
+      });
+    });
+  </script></body>
+</html>
